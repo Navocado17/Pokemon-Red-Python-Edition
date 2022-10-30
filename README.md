@@ -1,0 +1,1 @@
+This is the best of the best absolute godlike python program ever in history of python program. Remaster of the hit classic Pokemon Red, in honor of Mr. Edward Sekar Dominic Sir. 
