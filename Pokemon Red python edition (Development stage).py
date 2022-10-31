@@ -1,7 +1,7 @@
 from pygame import mixer
-mixer.music.init()
+mixer.init()
 mixer.music.load("SOUND/02 Opening (part 2).mp3")
-mixer.play()
+mixer.music.play()
 print("POKéMON Red Python edition!")
 print("1.CONTINUE")
 print("2.NEW GAME")
