@@ -6,7 +6,7 @@ print("POKéMON Red: Python edition!")
 print(">NEW GAME")
 print(">OPTION")
 
-option=input("Enter your option:")
+option=input("Enter your option_")
 if option.upper()=="NEW GAME":
      mixer.init()
      mixer.music.load("SOUND/03 To Bill's Origin ~ From Cerulean.mp3 ")
@@ -96,7 +96,7 @@ if option.upper()=="NEW GAME":
           input("")
           print("It's unsafe! Wild POKéMON live in tall grass!", end = "")
           input("")
-          print("You need your own POKéMON for your proctection", end = "")
+          print("You need your own POKéMON for your protection", end = "")
           input("")
           print("I know! Here, come with me!", end = "")
           input("")
