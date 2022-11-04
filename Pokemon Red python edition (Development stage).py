@@ -6,6 +6,8 @@ isChoosing = True
 player_pokedex = []
 party=[]
 rival_pokedex = []
+player=[]
+rival=[]
 mixer.init()
 mixer.music.load("SOUND/02 Opening (part 2).mp3")
 mixer.music.play()
@@ -18,8 +20,6 @@ if option.upper()=="NEW GAME":
      mixer.init()
      mixer.music.load("SOUND/03 To Bill's Origin ~ From Cerulean.mp3 ")
      mixer.music.play()
-     player=[]
-     rival=[]
      print("Hello there! Welcome to the world of POKéMON!", end = "")
      input("")
      print("My name is OAK! People call me the POKéMON PROF!", end = "")
@@ -74,7 +74,7 @@ if option.upper()=="NEW GAME":
      print("You step outside your house, as the blinding lights of the outdoors hit, you look around", end = "")
      input("")
      while isExploring == True:
-          print("\nWhere will you go now?", end = "")
+          print("\nWhere will you go now?")
           print(rname+"'s house")
           print("OAK POKéMON RESEARCH LAB")
           print("Wild grass")
@@ -84,11 +84,13 @@ if option.upper()=="NEW GAME":
                input("")
                print("Hi",name+"!",rname,"is out at Grandpa's lab.", end = "")
                input("")
+               print("You decide to go back out", end = "")
+               input("")
                continue
           if pt.upper()=="OAK POKEMON RESEARCH LAB":
                print("You decide to head straight over to PROF.OAK's lab, just like your mother insisted. As you enter, you see a lot of scientists", end = "")
                input("")
-               print("You then walk deeper into the room, just to see",rname)
+               print("You then walk deeper into the room, just to see",rname, end = "")
                input("")
                print(rname+": Yo",name,"Gramps isn't around!", end = "")
                input("")
@@ -146,31 +148,31 @@ if option.upper()=="NEW GAME":
      input("")
      print("You can choose between any of the 3 POKéMON on the table", end = "")
      input("")
-     print("Which one do you want?", end = "")
+     print("Which one do you want?")
      print("CHARMANDER, the FIRE lizard POKéMON")
      print("SQUIRTLE, the WATER tinyturtle POKéMON")
      print("BULBASAUR, the GRASS seed POKéMON")
      while isChoosing == True:
           starter=input("\nChoose your starter POKéMON_")
           if starter.lower()=="charmander":
-               confirm=input("So! You want the fire POKéMON, " + name  + "? [Y/n]")
-               if confirm.lower()=="y":
+               confirm=input("So! You want the fire POKéMON, CHARMANDER? [>YES/>NO]")
+               if confirm.lower()=="yes":
                     player_pokedex.append(pokemonDB.charmander)
                     rival_pokedex.append(pokemonDB.squirtle)
                     isChoosing = False
                else:
                     continue
           if starter.lower()=="squirtle":
-               confirm=input("So! You want the water POKéMON, " + name  + "? [Y/n]")
-               if confirm.lower()=="y":
+               confirm=input("So! You want the water POKéMON, SQUIRTLE? [>YES/>NO]")
+               if confirm.lower()=="yes":
                     player_pokedex.append(pokemonDB.squirtle)
                     rival_pokedex.append(pokemonDB.bulbasaur)
                     isChoosing = False
                else:
                     continue
           if starter.lower()=="bulbasaur":
-               confirm=input("So! You want the plant POKéMON, " + name  + "? [Y/n]")
-               if confirm.lower()=="y":
+               confirm=input("So! You want the plant POKéMON, BULBASAUR? [>YES/>NO]")
+               if confirm.lower()=="yes":
                     player_pokedex.append(pokemonDB.bulbasaur)
                     rival_pokedex.append(pokemonDB.charmander)
                     isChoosing = False
@@ -186,14 +188,14 @@ if option.upper()=="NEW GAME":
      input("")
      mixer.music.load("SOUND/31 Oak Research Lab.mp3")
      mixer.music.play()
-     pt = input("Do you want to give a nickname to " + player_pokedex[0].species +"? (y/n)")
-     if pt.lower() == "y":
+     nick = input("Do you want to give a nickname to " + player_pokedex[0].species +"? (>YES/>NO)")
+     if nick.lower() == "yes":
           player_pokedex[0].name = input("Enter Nickname for " + player_pokedex[0].species + ": ")      
      print(rname+": I'll take this one then!", end = "")
      input("")
      mixer.music.load("SOUND/51 Pokedex Fanfare 2.mp3")
      mixer.music.play()
-     print(rname,"received a",rival_pokedex[0].species,"!", end = "")
+     print(rname,"received a",rival_pokedex[0].species+"!", end = "")
      input("")
      mixer.music.load("SOUND/31 Oak Research Lab.mp3")
      mixer.music.play()
@@ -211,7 +213,7 @@ if option.upper()=="NEW GAME":
      input("")
      mixer.music.load("SOUND/23 Battle (VS Trainer).mp3")
      mixer.music.play()
-     print(rname,"wants to fight!")
+     print(rname,"wants to fight!", end = "")
      input("")
      print(rname,"sent out",rival_pokedex[0].species+"!", end = "")
      input("")
