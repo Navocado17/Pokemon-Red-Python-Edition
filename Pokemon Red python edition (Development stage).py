@@ -2,6 +2,7 @@ from pygame import mixer
 isExploring = True
 isChoosing = True
 player_pokedex = []
+party=[]
 rival_pokedex = []
 mixer.init()
 mixer.music.load("SOUND/02 Opening (part 2).mp3")
@@ -10,7 +11,7 @@ print("POKéMON Red: Python edition!")
 print(">NEW GAME")
 print(">OPTION")
 
-option=input("Enter your option_")
+option=input("Enter your option:")
 if option.upper()=="NEW GAME":
      mixer.init()
      mixer.music.load("SOUND/03 To Bill's Origin ~ From Cerulean.mp3 ")
@@ -72,7 +73,6 @@ if option.upper()=="NEW GAME":
      input("")
      while isExploring == True:
           print("\nWhere will you go now?", end = "")
-          input("")
           print(rname+"'s house")
           print("OAK POKéMON RESEARCH LAB")
           print("Wild grass")
@@ -81,6 +81,7 @@ if option.upper()=="NEW GAME":
                print("You decide to go to",rname,"'s house. As you walk in, you are greeted by his sister", end = "")
                input("")
                print("Hi",name+"!",rname,"is out at Grandpa's lab.", end = "")
+               input("")
                continue
           if pt.upper()=="OAK POKEMON RESEARCH LAB":
                print("You decide to head straight over to PROF.OAK's lab, just like your mother insisted. As you enter, you see a lot of scientists", end = "")
@@ -88,7 +89,9 @@ if option.upper()=="NEW GAME":
                print("You then walk deeper into the room, just to see",rname)
                input("")
                print(rname+": Yo",name,"Gramps isn't around!", end = "")
+               input("")
                print("Without wasting more time, you head out of the lab in search of him", end = "")
+               input("")
                continue
           if pt.lower()=="wild grass":
                isExploring = False
@@ -96,78 +99,6 @@ if option.upper()=="NEW GAME":
                input("")
                print("It interests you, so you decide to step in the grass", end = "")
      input("")
-     print(rname+"'s house (Under dev)")
-     print("OAK POKéMON RESEARCH LAB (Not finished)")
-     print("Wild grass")
-     pt=input("Choose where you will go _")
-     if pt.lower()==rname+"'s house":
-          print("You decide to go to",rname,"'s house. As you walk in, you are greeted by his sister", end = "")
-          input("")
-          print("Hi",name+"!",rname,"is out at Grandpa's lab.", end = "")
-     if pt.upper()=="OAK POKEMON RESEARCH LAB":
-          print("You decide to head straight over to PROF.OAK's lab, just like your mother insisted. As you enter, you see a lot of scientists", end = "")
-          input("")
-          print("You then walk deeper into the room, just to see",rname, end = "")
-          input("")
-          print(rname+": Yo",name,"Gramps isn't around!", end = "")
-          input("") 
-          print("Without wasting more time, you head out of the lab in search of him", end = "")
-     if pt.lower()=="wild grass":
-          print("You notice a patch of tall grass", end = "")
-          input("")
-          print("It interests you, so you decide to step in the grass", end = "")
-          input("")
-          print("But before you can take a step further in-", end = "")
-          input("")
-          mixer.music.load("SOUND/14 Professor Oak.mp3")
-          mixer.music.play()
-          print("OAK: Hey! Wait! Don't go out!", end = "")
-          input("")
-          print("It's unsafe! Wild POKéMON live in tall grass!", end = "")
-          input("")
-          print("You need your own POKéMON for your protection", end = "")
-          input("")
-          print("I know! Here, come with me!", end = "")
-          input("")
-          print("Professor Oak takes you to his lab", end = "")
-          input("")
-          mixer.music.load("SOUND/31 Oak Research Lab.mp3")
-          mixer.music.play()
-          print("You see",rname,"impatiently waiting")
-          print(rname+": Gramps! I'm fed up with waiting!", end = "")
-          input("")
-          print("OAK:",rname+"? Let me think...", end = "")
-          input("")
-          print("Oh, that's right, I told you to come! Just wait!", end = "")
-          input("")
-          print("Here,",name+"!", end = "")
-          input("")
-          print("There are 3 POKéMON here!", end = "")
-          input("")
-          print("They are inside the POKé BALLs.", end = "")
-          input("")
-          print("When I was young, I was a serious POKéMON trainer! In my old age, I have only 3 left, but you can have one! Choose!", end = "")
-          input("")
-          print(rname+": Hey! Gramps! What about me?", end = "")
-          input("")
-          print("OAK: Be patient!",rname+", you can have one too!", end = "")
-          input("")
-          print("On the table to your right, you see 3 POKéBALLs, each containing a strong unique POKéMON", end = "")
-          input("")
-          print("The first ball contains CHARMANDER, the FIRE lizard POKéMON", end = "")
-          input("")
-          print("The second ball contains SQUIRTLE, the WATER tinyturtle POKéMON", end = "")
-          input("")
-          print("The third ball contains BULBASAUR, the GRASS seed POKéMON", end = "")
-          input("")
-          print("You can choose between any of the 3 POKéMON on the table", end = "")
-          input("")
-          print("Which one do you want?", end = "")
-          input("")
-          print("CHARMANDER, the FIRE lizard POKéMON")
-          print("SQUIRTLE, the WATER tinyturtle POKéMON")
-          print("BULBASAUR, the GRASS seed POKéMON")
-          starter=input("Choose your starter POKéMON_(for now only charmander works)")
      print("But before you can take a step further in-", end = "")
      input("")
      mixer.music.load("SOUND/14 Professor Oak.mp3")
@@ -176,7 +107,7 @@ if option.upper()=="NEW GAME":
      input("")
      print("It's unsafe! Wild POKéMON live in tall grass!", end = "")
      input("")
-     print("You need your own POKéMON for your proctection", end = "")
+     print("You need your own POKéMON for your protection", end = "")
      input("")
      print("I know! Here, come with me!", end = "")
      input("")
@@ -214,12 +145,11 @@ if option.upper()=="NEW GAME":
      print("You can choose between any of the 3 POKéMON on the table", end = "")
      input("")
      print("Which one do you want?", end = "")
-     input("")
      print("CHARMANDER, the FIRE lizard POKéMON")
      print("SQUIRTLE, the WATER tinyturtle POKéMON")
      print("BULBASAUR, the GRASS seed POKéMON")
      while isChoosing == True:
-          starter=input("\nChoose your starter POKéMON_")   
+          starter=input("\nChoose your starter POKéMON_")
           if starter.lower()=="charmander":
                confirm=input("So! You want the fire POKéMON, " + name  + "? [Y/n]")
                if confirm.lower()=="y":
@@ -245,6 +175,7 @@ if option.upper()=="NEW GAME":
                else:
                     continue
 
+     party.append(player_pokedex[0])
      print("This POKéMON is really energetic!", end = "")
      input("")
      mixer.music.load("SOUND/51 Pokedex Fanfare 2.mp3")
@@ -275,7 +206,28 @@ if option.upper()=="NEW GAME":
      input("")
      mixer.music.load("SOUND/23 Battle (VS Trainer).mp3")
      mixer.music.play()
-     print(rname,"wants to fight!") 
+     print(rname,"wants to fight!")
+     input("")
+     print(rname,"sent out",rival_pokedex[0]+"!", end = "")
+     input("")
+     print("Go!",player_pokedex[0],"!")
+     
+     
+                    
+                    
+                    
+                    
+                    
+     
+          
+     
+     
+     
+     
+     
+     
+     
+     
                     
                     
                     
