@@ -1,0 +1,8 @@
+1. Open your CMD as administrator.
+2. Use cd Command to the path of this folder on your computer. 
+For example:
+cd C:\Users\Username\Documents\Python\Pokemon-Red-Python-Edition\requirements
+3. Once you are in this folder type in the following command:
+pip install pygame-1.9.6-cp39-cp39-win_amd64.whl
+4. pygame version 1.9.6 should be installed successfully. 
+

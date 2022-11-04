@@ -1,4 +1,6 @@
 from pygame import mixer
+import pokemonDB
+
 isExploring = True
 isChoosing = True
 player_pokedex = []
@@ -153,24 +155,24 @@ if option.upper()=="NEW GAME":
           if starter.lower()=="charmander":
                confirm=input("So! You want the fire POKéMON, " + name  + "? [Y/n]")
                if confirm.lower()=="y":
-                    player_pokedex.append("CHARMANDER")
-                    rival_pokedex.append("SQUIRTLE")
+                    player_pokedex.append(pokemonDB.charmander)
+                    rival_pokedex.append(pokemonDB.squirtle)
                     isChoosing = False
                else:
                     continue
           if starter.lower()=="squirtle":
                confirm=input("So! You want the water POKéMON, " + name  + "? [Y/n]")
                if confirm.lower()=="y":
-                    player_pokedex.append("SQUIRTLE")
-                    rival_pokedex.append("BULBASAUR")
+                    player_pokedex.append(pokemonDB.squirtle)
+                    rival_pokedex.append(pokemonDB.bulbasaur)
                     isChoosing = False
                else:
                     continue
           if starter.lower()=="bulbasaur":
                confirm=input("So! You want the plant POKéMON, " + name  + "? [Y/n]")
                if confirm.lower()=="y":
-                    player_pokedex.append("BULBASAUR")
-                    rival_pokedex.append("CHARMANDER")
+                    player_pokedex.append(pokemonDB.bulbasaur)
+                    rival_pokedex.append(pokemonDB.charmander)
                     isChoosing = False
                else:
                     continue
@@ -180,15 +182,18 @@ if option.upper()=="NEW GAME":
      input("")
      mixer.music.load("SOUND/51 Pokedex Fanfare 2.mp3")
      mixer.music.play()
-     print(name,"received a",player_pokedex[0],"!", end = "")
+     print(name,"received a",player_pokedex[0].species,"!", end = "")
      input("")
      mixer.music.load("SOUND/31 Oak Research Lab.mp3")
      mixer.music.play()
+     pt = input("Do you want to give a nickname to " + player_pokedex[0].species +"? (y/n)")
+     if pt.lower() == "y":
+          player_pokedex[0].name = input("Enter Nickname for " + player_pokedex[0].species + ": ")      
      print(rname+": I'll take this one then!", end = "")
      input("")
      mixer.music.load("SOUND/51 Pokedex Fanfare 2.mp3")
      mixer.music.play()
-     print(rname,"received a",rival_pokedex[0],"!", end = "")
+     print(rname,"received a",rival_pokedex[0].species,"!", end = "")
      input("")
      mixer.music.load("SOUND/31 Oak Research Lab.mp3")
      mixer.music.play()
@@ -208,38 +213,6 @@ if option.upper()=="NEW GAME":
      mixer.music.play()
      print(rname,"wants to fight!")
      input("")
-     print(rname,"sent out",rival_pokedex[0]+"!", end = "")
+     print(rname,"sent out",rival_pokedex[0].species+"!", end = "")
      input("")
-     print("Go!",player_pokedex[0],"!")
-     
-     
-                    
-                    
-                    
-                    
-                    
-     
-          
-     
-     
-     
-     
-     
-     
-     
-     
-                    
-                    
-                    
-                    
-                    
-     
-          
-     
-     
-     
-     
-     
-     
-     
-     
+     print("Go!",player_pokedex[0].name+"!")
