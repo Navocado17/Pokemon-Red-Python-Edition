@@ -16,7 +16,7 @@ print(">NEW GAME")
 print(">OPTION")
 
 option=input("Enter your option:")
-if option.upper()=="NEW GAME":
+if option.lower()=="new game":
      mixer.init()
      mixer.music.load("SOUND/03 To Bill's Origin ~ From Cerulean.mp3 ")
      mixer.music.play()
@@ -26,17 +26,17 @@ if option.upper()=="NEW GAME":
      input("")
      print("This world is inhabited by creatures called POKéMON!", end = "")
      input("")
-     print("For some people, POKéMON are pets. Others use them for fights", end = "")
+     print("For some people, POKéMON are pets. Others use them for fights.", end = "")
      input("")
-     print("Myself... I study POKéMON as a profession", end = "")
+     print("Myself... I study POKéMON as a profession.", end = "")
      input("")
-     name=input("First, What is your name?_")
+     name=input("First, what is your name?_")
      if name==(""):
           name=("RED")
      else:
           pass
      player.append(name)
-     print("Right! So your name is",name+"!", end = "")
+     print("Right! So your name is", name+"!", end = "")
      input("")
      print("This is my grand-son. He's been your rival since you were a baby.", end = "")
      input("")
@@ -46,9 +46,9 @@ if option.upper()=="NEW GAME":
      else:
           pass
      rival.append(rname)
-     print("That's right! I remember now! His name is",rname+"!", end = "")
+     print("That's right! I remember now! His name is", rname+"!", end = "")
      input("")
-     print(name+"!" , end = "")
+     print(name+"!", end = "")
      input("")
      print("Your very own POKéMON legend is about to unfold!", end = "")
      input("")
@@ -56,7 +56,7 @@ if option.upper()=="NEW GAME":
      input("")
      mixer.music.load("SOUND/50 Pokedex Fanfare 1.mp3")
      mixer.music.play()
-     print("...........", end = "")
+     print("..........", end = "")
      input("")
      print("You wake up in your room, you're a boy who just turned 10, which means you're able to get your first POKéMON!", end = "")
      input("")
@@ -69,7 +69,7 @@ if option.upper()=="NEW GAME":
      input("")
      print("MOM: Right. All boys leave home some day. It said so on TV. ", end = "")
      input("")
-     print("PROF.OAK,  next door, is looking for you.", end = "")
+     print("PROF.OAK, next door, is looking for you.", end = "")
      input("")
      print("You step outside your house, as the blinding lights of the outdoors hit, you look around", end = "")
      input("")
@@ -80,9 +80,9 @@ if option.upper()=="NEW GAME":
           print("Wild grass")
           pt=input("Choose where you will go _")
           if pt.lower()==(rname.lower()+"'s house"):
-               print("You decide to go to",rname,"'s house. As you walk in, you are greeted by his sister", end = "")
+               print("You decide to go to", rname,"'s house. As you walk in, you are greeted by his sister", end = "")
                input("")
-               print("Hi",name+"!",rname,"is out at Grandpa's lab.", end = "")
+               print("Hi", name+"!", rname, "is out at Grandpa's lab.", end = "")
                input("")
                print("You decide to go back out", end = "")
                input("")
