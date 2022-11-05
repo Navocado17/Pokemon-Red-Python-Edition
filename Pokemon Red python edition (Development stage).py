@@ -4,8 +4,8 @@ import pokemonDB
 isExploring = True
 isChoosing = True
 player_pokedex = []
-party=[]
 rival_pokedex = []
+party=[]
 player=[]
 rival=[]
 mixer.init()
