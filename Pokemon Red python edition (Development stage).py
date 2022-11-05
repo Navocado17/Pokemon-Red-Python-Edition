@@ -3,11 +3,11 @@ import pokemonDB
 
 isExploring = True
 isChoosing = True
+player=[]
+rival=[]
 player_pokedex = []
 party=[]
 rival_pokedex = []
-player=[]
-rival=[]
 mixer.init()
 mixer.music.load("SOUND/02 Opening (part 2).mp3")
 mixer.music.play()
