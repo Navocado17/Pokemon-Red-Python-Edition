@@ -78,9 +78,10 @@ if option=="new game" or option=="newgame" or option=="new":
           print("\nWhere will you go now?")
           print(rname+"'s house")
           print("OAK POKéMON RESEARCH LAB")
-          print("Wild grass")
-          pt=input("Choose where you will go _")
-          if pt.lower()==(rname.lower()+"'s house"):
+          print("Tall grass")
+          pt=input("Choose where you will go?_")
+          pt=pt.lower()
+          if pt==(rname.lower()+"'s house"):
                print("You decide to go to", rname+"'s house. As you walk in, you are greeted by his sister", end = "")
                input("")
                print("Hi", name+"!", rname, "is out at Grandpa's lab.", end = "")
@@ -88,7 +89,7 @@ if option=="new game" or option=="newgame" or option=="new":
                print("You decide to go back out", end = "")
                input("")
                continue
-          if pt.upper()=="OAK POKEMON RESEARCH LAB":
+          if pt=="oak pokémon research lab" or pt=="oak pokemon research lab":
                print("You decide to head straight over to PROF.OAK's lab, just like your mother insisted. As you enter, you see a lot of scientists", end = "")
                input("")
                print("You then walk deeper into the room, just to see",rname, end = "")
@@ -98,7 +99,7 @@ if option=="new game" or option=="newgame" or option=="new":
                print("Without wasting more time, you head out of the lab in search of him", end = "")
                input("")
                continue
-          if pt.lower()=="wild grass":
+          if pt=="tall grass":
                isExploring = False
                print("You notice a patch of tall grass", end = "")
                input("")
@@ -112,7 +113,7 @@ if option=="new game" or option=="newgame" or option=="new":
      input("")
      print("It's unsafe! Wild POKéMON live in tall grass!", end = "")
      input("")
-     print("You need your own POKéMON for your protection", end = "")
+     print("You need your own POKéMON for your protection.", end = "")
      input("")
      print("I know! Here, come with me!", end = "")
      input("")
@@ -131,13 +132,13 @@ if option=="new game" or option=="newgame" or option=="new":
      input("")
      print("There are 3 POKéMON here!", end = "")
      input("")
-     print("They are inside the POKé BALLs.", end = "")
+     print("Haha! They are inside the POKé BALLs.", end = "")
      input("")
      print("When I was young, I was a serious POKéMON trainer! In my old age, I have only 3 left, but you can have one! Choose!", end = "")
      input("")
      print(rname+": Hey! Gramps! What about me?", end = "")
      input("")
-     print("OAK: Be patient!",rname+", you can have one too!", end = "")
+     print("OAK: Be patient!", rname+", you can have one too!", end = "")
      input("")
      print("On the table to your right, you see 3 POKéBALLs, each containing a strong unique POKéMON", end = "")
      input("")
