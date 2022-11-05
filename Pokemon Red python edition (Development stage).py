@@ -16,7 +16,8 @@ print(">NEW GAME")
 print(">OPTION")
 
 option=input("Enter your option:")
-if option.lower()=="new game":
+option = option.lower()
+if option=="new game" or option=="newgame" or option=="new":
      mixer.init()
      mixer.music.load("SOUND/03 To Bill's Origin ~ From Cerulean.mp3 ")
      mixer.music.play()
@@ -80,7 +81,7 @@ if option.lower()=="new game":
           print("Wild grass")
           pt=input("Choose where you will go _")
           if pt.lower()==(rname.lower()+"'s house"):
-               print("You decide to go to", rname,"'s house. As you walk in, you are greeted by his sister", end = "")
+               print("You decide to go to", rname+"'s house. As you walk in, you are greeted by his sister", end = "")
                input("")
                print("Hi", name+"!", rname, "is out at Grandpa's lab.", end = "")
                input("")
@@ -92,7 +93,7 @@ if option.lower()=="new game":
                input("")
                print("You then walk deeper into the room, just to see",rname, end = "")
                input("")
-               print(rname+": Yo",name,"Gramps isn't around!", end = "")
+               print(rname+": Yo", name+"!", "Gramps isn't around!", end = "")
                input("")
                print("Without wasting more time, you head out of the lab in search of him", end = "")
                input("")
