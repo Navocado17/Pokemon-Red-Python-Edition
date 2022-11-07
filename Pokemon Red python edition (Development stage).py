@@ -15,9 +15,9 @@ print("POKéMON Red: Python edition!")
 print(">NEW GAME")
 print(">OPTION")
 
-option=input("Enter your option:")
+option=input("Enter your option:_")
 option = option.lower()
-if option=="new game" or option=="new":
+if option=="new game":
      mixer.init()
      mixer.music.load("SOUND/03 To Bill's Origin ~ From Cerulean.mp3 ")
      mixer.music.play()
@@ -81,7 +81,7 @@ if option=="new game" or option=="new":
           print("Tall grass")
           pt=input("Choose where you will go?_")
           pt=pt.lower()
-          if pt==(rname.lower()+"'s house"):
+          if pt==(rname.lower()+"'s house") or pt==(rname.lower()+"s house"):
                print("You decide to go to", rname+"'s house. As you walk in, you are greeted by his sister", end = "")
                input("")
                print("Hi", name+"!", rname, "is out at Grandpa's lab.", end = "")
