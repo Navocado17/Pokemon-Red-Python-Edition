@@ -5,8 +5,8 @@ isExploring = True
 isChoosing = True
 player=[]
 rival=[]
-player_pokedex = []
 party=[]
+player_pokedex = []
 rival_pokedex = []
 mixer.init()
 mixer.music.load("SOUND/02 Opening (part 2).mp3")
@@ -17,7 +17,7 @@ print(">OPTION")
 
 option=input("Enter your option:")
 option = option.lower()
-if option=="new game" or option=="newgame" or option=="new":
+if option=="new game" or option=="new":
      mixer.init()
      mixer.music.load("SOUND/03 To Bill's Origin ~ From Cerulean.mp3 ")
      mixer.music.play()
@@ -101,7 +101,7 @@ if option=="new game" or option=="newgame" or option=="new":
                continue
           if pt=="tall grass":
                isExploring = False
-               print("You notice a patch of tall grass", end = "")
+               print("Wandering around in search of professor Oak, you stumble a patch of tall grass", end = "")
                input("")
                print("It interests you, so you decide to step in the grass", end = "")
      input("")
