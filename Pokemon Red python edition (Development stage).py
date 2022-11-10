@@ -1,6 +1,6 @@
 from pygame import mixer
 import pokemonDB
-
+import mechanics
 isExploring = True
 isChoosing = True
 player=[]
@@ -8,6 +8,7 @@ rival=[]
 party=[]
 player_pokedex = []
 rival_pokedex = []
+
 mixer.init()
 mixer.music.load("SOUND/01 Opening (part 1).mp3")
 mixer.music.play()
@@ -252,4 +253,8 @@ if option=="new game":
      print(rname,"sent out",rival_pokedex[0].species+"!", end = "")
      input("")
      print("Go!",player_pokedex[0].name+"!")
+     mechanics.battle(party[0], rival_pokedex[0])
+
+
+
 

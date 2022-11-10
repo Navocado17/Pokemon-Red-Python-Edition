@@ -1,9 +1,10 @@
 class Move:
   def __init__(self, moveName, movePWR, moveType, movePP): #TODO Add Move Accuracy and Priority and Attribute Moves and Special Moves
     self.moveName = moveName
-    self.movesPWR = movePWR
+    self.movePWR = movePWR
     self.moveType = moveType
-    self.moveCharge = movePP
+    self.movePP = movePP
+    
 
 growl = Move("Growl", 0, "Normal", 40)
 scratch = Move("Scratch", 40, "Normal", 35)
