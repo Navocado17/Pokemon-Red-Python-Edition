@@ -3,13 +3,14 @@ mixer.init()
 
 def battle(playerPokemon, enemyPokemon):
      while playerPokemon.hp > 0 and enemyPokemon.hp > 0:
-          print("\n" + playerPokemon.name + " - HP: " + str(playerPokemon.hp))
+          print("\n"+playerPokemon.name + " - HP: " + str(playerPokemon.hp))
           print(enemyPokemon.name + " - HP: " + str(enemyPokemon.hp))
+          print(">FIGHT  >PkMn \n>ITEM  >RUN")
           input("")
           #Players Turn
           isChoosing = True
           while isChoosing == True:
-               print("\nMoves:", playerPokemon.move1.moveName +",", playerPokemon.move2.moveName+",", playerPokemon.move3.moveName)
+               print("Moves:", playerPokemon.move1.moveName +",", playerPokemon.move2.moveName+",", playerPokemon.move3.moveName)
                selectedMove = input("Select A Move: ")
                if selectedMove.lower() == playerPokemon.move1.moveName.lower():
                     currentMovePower = playerPokemon.move1.movePWR
@@ -38,7 +39,7 @@ def battle(playerPokemon, enemyPokemon):
           random = 217/255 # TODO actually make random
           damage = ((((2 * playerPokemon.level * critical)/5 + 2) * currentMovePower * playerPokemon.attack/enemyPokemon.defense)/50 + 2) * STAB * type1 * type2 * random 
           damage = round(damage)
-          print("You used " + selectedMove)
+          print("\n"+playerPokemon.name,"used", selectedMove")
           print("You did " + str(damage) +" DMG")
           input("")
           enemyPokemon.hp -= damage
@@ -48,7 +49,7 @@ def battle(playerPokemon, enemyPokemon):
                mixer.music.load("SOUND/26 Victory (VS Trainer).mp3")
                mixer.music.play()
                input("")
-               break
+               return True 
 
           #Enemys Turn (No rng rn uses only second move)
           selectedMove = enemyPokemon.move2.moveName
@@ -66,13 +67,12 @@ def battle(playerPokemon, enemyPokemon):
           random = 217/255 # TODO actually make random
           damage = ((((2 * enemyPokemon.level * critical)/5 + 2) * currentMovePower * enemyPokemon.attack/playerPokemon.defense)/50 + 2) * STAB * type1 * type2 * random 
           damage = round(damage)
-          print(enemyPokemon.name + " used " + selectedMove)
+          print("Enemy",enemyPokemon.name + " used " + selectedMove)
           print(enemyPokemon.name + " did " + str(damage) + " DMG")
           input("")
           
           playerPokemon.hp -= damage
           if playerPokemon.hp <= 0:
-               print(playerPokemon.name, "has fainted!")
-               print("You lost")
+               print(playerPokemon.name, "fainted!")
                input("")
-               break
+               return False
