@@ -252,3 +252,4 @@ if option=="new game":
      print(rname,"sent out",rival_pokedex[0].species+"!", end = "")
      input("")
      print("Go!",player_pokedex[0].name+"!")
+
