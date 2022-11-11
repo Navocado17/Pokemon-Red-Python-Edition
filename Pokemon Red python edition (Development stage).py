@@ -1,11 +1,10 @@
 from pygame import mixer
 import termcolor
 import os
-import timea
+import time
 import pokemonDB
 import mechanics
-isExploring = True
-isChoosing = True
+isDeciding = True
 player=[]
 money=0
 rival=[]
@@ -44,16 +43,16 @@ print("                            ⠀⠀⢐⠀⠀⠁⡀⠀⠀⢀⠀⠀⠀⢨⠀
 print("                            ⠀⢀⣨⣤⠀⠀⠐⠃⠐⠚⠢⠀⠀⠈⠑⠊⠀⠀⠀")
 print("                            ⠀⠘⠓⠋⠉⠁⠀⠀⠀⠀⠀⠓⢶⡾⠗⠀⠀⠀⠀")
 
-input("\n                        (Press Any Key To Continue)")
+input("\n                        (Press Enter To Continue)")
 
 mixer.music.load("SOUND/02 Opening (part 2).mp3")
 mixer.music.play()
-while isChoosing == True:
+while isDeciding == True:
      print("\n\nPOKéMON Red: Python edition!")
      print(">NEW GAME")
      print(">OPTION")
  
-     option=input("Enter your option ▼"
+     option=input("Enter your option ▼")
      option = option.lower()
      if option=="new game" or option=="newgame" or option=="ng":
           mixer.init()
@@ -111,7 +110,7 @@ while isChoosing == True:
           input("")
           print("You step outside your house, as the blinding lights of the outdoors hit, you look around", end = "")
           input("")
-          while isExploring == True:
+          while isDeciding == True:
                print("\nWhere will you go now?")
                print(rname+"'s house")
                print("OAK POKéMON RESEARCH LAB")
@@ -137,7 +136,7 @@ while isChoosing == True:
                     input("")
                     continue
                if pt=="tall grass":
-                    isExploring = False
+                    isDeciding = False
                     print("Wandering around in search of professor Oak, you stumble a patch of tall grass", end = "")
                     input("")
                     print("It interests you, so you decide to step in the grass", end = "")
@@ -191,14 +190,14 @@ while isChoosing == True:
           print("CHARMANDER, the FIRE lizard POKéMON")
           print("SQUIRTLE, the WATER tinyturtle POKéMON")
           print("BULBASAUR, the GRASS seed POKéMON")
-          while isChoosing == True:
+          while isDeciding == True:
                starter=input("\nChoose your starter POKéMON ▼")
                if starter.lower()=="charmander":
                     confirm=input("So! You want the fire POKéMON, CHARMANDER? [>YES/>NO]")
                     if confirm.lower()=="yes":
                          player_pokedex.append(pokemonDB.charmander)
                          rival_pokedex.append(pokemonDB.squirtle)
-                         isChoosing = False
+                         isDeciding = False
                     else:
                          continue
                if starter.lower()=="squirtle":
@@ -206,7 +205,7 @@ while isChoosing == True:
                     if confirm.lower()=="yes":
                          player_pokedex.append(pokemonDB.squirtle)
                          rival_pokedex.append(pokemonDB.bulbasaur)
-                         isChoosing = False
+                         isDeciding = False
                     else:
                          continue
                if starter.lower()=="bulbasaur":
@@ -214,7 +213,7 @@ while isChoosing == True:
                     if confirm.lower()=="yes":
                          player_pokedex.append(pokemonDB.bulbasaur)
                          rival_pokedex.append(pokemonDB.charmander)
-                         isChoosing = False
+                         isDeciding = False
                     else:
                          continue
 
@@ -261,44 +260,34 @@ while isChoosing == True:
           if IsWon == True:
                print(rname+": WHAT? Unbeliebable!", end = "")
                input("")
-               print("I picked the wrong POKéMON!",end == "")
+               print("I picked the wrong POKéMON!",end = "")
                input("")
-               print(name,"got 175₽ for winning!", end == "")
+               print(name,"got 175₽ for winning!", end = "")
                input("")
-               print(rname+": Okay! I'll make my POKéMON fight to toughen it up!", end == "")
+               print(rname+": Okay! I'll make my POKéMON fight to toughen it up!", end = "")
                input("")
-               print(name+"! Gramps! Smell you later!", end == "")
+               print(name+"! Gramps! Smell you later!", end = "")
                mixer.music.load("SOUND/15 Rival Appears.mp3")
                mixer.music.play()
                input("")
-               print(rname,"marches out of the Lab, frustrated but determined.", end == "")
+               print(rname,"marches out of the Lab, frustrated but determined.", end = "")
           if IsWon == False:
-               print(rname+": Yeah! Am I great or what?", end == "")
+               print(rname+": Yeah! Am I great or what?", end = "")
                input("")
-               print(rname+": Okay! I'll make my POKéMON fight to toughen it up!", end == "")
+               print(rname+": Okay! I'll make my POKéMON fight to toughen it up!", end = "")
                input("")
-               print(name+"! Gramps! Smell you later!", end == "")
+               print(name+"! Gramps! Smell you later!", end = "")
                mixer.music.load("SOUND/15 Rival Appears.mp3")
                mixer.music.play()
                input("")
-               print(rname,"marches out of the Lab, cocky and fullfiled", end == "")
+               print(rname,"marches out of the Lab, cocky and fullfiled", end = "")
                input("")
           mixer.music.load("SOUND/31 Oak Research Lab.mp3")
           mixer.music.play()
           print("You walk over to Professor OAK after the fight")
           input("")
-          print("OAK:",name+", raise your young POKéMON by making it fight!", end == "")
+          print("OAK:",name+", raise your young POKéMON by making it fight!", end = "")
           input("")
           print("So, you walk out of the lab, and set out on your Pokémon journey")
           mixer.music.load("SOUND/04 Pallet Town's Theme.mp3")
           mixer.music.play()
-          
-          
-          
-               
-               
-               
-
-
-
-
