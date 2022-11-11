@@ -39,7 +39,7 @@ def battle(playerPokemon, enemyPokemon):
           random = 217/255 # TODO actually make random
           damage = ((((2 * playerPokemon.level * critical)/5 + 2) * currentMovePower * playerPokemon.attack/enemyPokemon.defense)/50 + 2) * STAB * type1 * type2 * random 
           damage = round(damage)
-          print("\n"+playerPokemon.name,"used", selectedMove")
+          print("\n"+playerPokemon.name,"used", selectedMove)
           print("You did " + str(damage) +" DMG")
           input("")
           enemyPokemon.hp -= damage
