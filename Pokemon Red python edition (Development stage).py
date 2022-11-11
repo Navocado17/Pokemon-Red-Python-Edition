@@ -4,8 +4,7 @@ import os
 import time
 import pokemonDB
 import mechanics
-isExploring = True
-isChoosing = True
+isDeciding = True
 player=[]
 money=0
 rival=[]
@@ -48,7 +47,7 @@ input("\n                        (Press Enter To Continue)")
 
 mixer.music.load("SOUND/02 Opening (part 2).mp3")
 mixer.music.play()
-while isChoosing == True:
+while isDeciding == True:
      print("\n\nPOKéMON Red: Python edition!")
      print(">NEW GAME")
      print(">OPTION")
@@ -111,7 +110,7 @@ while isChoosing == True:
           input("")
           print("You step outside your house, as the blinding lights of the outdoors hit, you look around", end = "")
           input("")
-          while isExploring == True:
+          while isDeciding == True:
                print("\nWhere will you go now?")
                print(rname+"'s house")
                print("OAK POKéMON RESEARCH LAB")
@@ -137,7 +136,7 @@ while isChoosing == True:
                     input("")
                     continue
                if pt=="tall grass":
-                    isExploring = False
+                    isDeciding = False
                     print("Wandering around in search of professor Oak, you stumble a patch of tall grass", end = "")
                     input("")
                     print("It interests you, so you decide to step in the grass", end = "")
@@ -191,14 +190,14 @@ while isChoosing == True:
           print("CHARMANDER, the FIRE lizard POKéMON")
           print("SQUIRTLE, the WATER tinyturtle POKéMON")
           print("BULBASAUR, the GRASS seed POKéMON")
-          while isChoosing == True:
+          while isDeciding == True:
                starter=input("\nChoose your starter POKéMON ▼")
                if starter.lower()=="charmander":
                     confirm=input("So! You want the fire POKéMON, CHARMANDER? [>YES/>NO]")
                     if confirm.lower()=="yes":
                          player_pokedex.append(pokemonDB.charmander)
                          rival_pokedex.append(pokemonDB.squirtle)
-                         isChoosing = False
+                         isDeciding = False
                     else:
                          continue
                if starter.lower()=="squirtle":
@@ -206,7 +205,7 @@ while isChoosing == True:
                     if confirm.lower()=="yes":
                          player_pokedex.append(pokemonDB.squirtle)
                          rival_pokedex.append(pokemonDB.bulbasaur)
-                         isChoosing = False
+                         isDeciding = False
                     else:
                          continue
                if starter.lower()=="bulbasaur":
@@ -214,7 +213,7 @@ while isChoosing == True:
                     if confirm.lower()=="yes":
                          player_pokedex.append(pokemonDB.bulbasaur)
                          rival_pokedex.append(pokemonDB.charmander)
-                         isChoosing = False
+                         isDeciding = False
                     else:
                          continue
 
@@ -292,13 +291,3 @@ while isChoosing == True:
           print("So, you walk out of the lab, and set out on your Pokémon journey")
           mixer.music.load("SOUND/04 Pallet Town's Theme.mp3")
           mixer.music.play()
-          
-          
-          
-               
-               
-               
-
-
-
-
