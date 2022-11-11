@@ -190,6 +190,7 @@ while isDeciding == True:
           print("CHARMANDER, the FIRE lizard POKéMON")
           print("SQUIRTLE, the WATER tinyturtle POKéMON")
           print("BULBASAUR, the GRASS seed POKéMON")
+          isDeciding = True
           while isDeciding == True:
                starter=input("\nChoose your starter POKéMON ▼")
                if starter.lower()=="charmander":
