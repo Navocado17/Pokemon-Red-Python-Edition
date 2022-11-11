@@ -4,11 +4,66 @@ class Move:
     self.movePWR = movePWR
     self.moveType = moveType
     self.movePP = movePP
-    
 
-growl = Move("Growl", 0, "Normal", 40)
-scratch = Move("Scratch", 40, "Normal", 35)
+"""
+absorb =
+acid =
+acid armor =
+agility =
+amnesia =
+aurora beam =
+barrage =
+barrier =
+bide =
+bind =
+bite =
+blizzard =
+body slam =
+bone club =
+bonemerang =
+bubble =
+bubblebeam =
+clamp =
+comet punch =
+confuse ray =
+confusion =
+constrict =
+conversion =
+counter =
+crabhammer =
+cut =
+defense curl =
+dig =
+disable =
+dizzy punch =
+double kick =
+double team =
+double-edge =
+doubleslap =
+dragon rage =
+dream eater =
+drill peck =
+earthquake =
+egg bomb =
+"""
 ember = Move("Ember", 40, "Fire", 25)
+"""
+explosion =
+fire blast =
+fire punch =
+fire spin =
+fissure =
+flamethrower =
+flash =
+fly =
+focus energy =
+fury attack =
+fury swipes =
+glare =
+"""
+growl = Move("Growl", 0, "Normal", 40)
+
+scratch = Move("Scratch", 40, "Normal", 35)
 tailWhip = Move("Tail Whip", 0, "Normal", 30)
 tackle = Move("Tackle", 35, "Normal", 35)
 waterGun = Move("Water Gun", 40, "Water", 25)
