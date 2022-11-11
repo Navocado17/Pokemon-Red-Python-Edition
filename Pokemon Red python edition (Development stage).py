@@ -1,7 +1,7 @@
 from pygame import mixer
 import termcolor
 import os
-import timea
+import time
 import pokemonDB
 import mechanics
 isExploring = True
@@ -53,7 +53,7 @@ while isChoosing == True:
      print(">NEW GAME")
      print(">OPTION")
  
-     option=input("Enter your option ▼"
+     option=input("Enter your option ▼")
      option = option.lower()
      if option=="new game" or option=="newgame" or option=="ng":
           mixer.init()
@@ -261,33 +261,33 @@ while isChoosing == True:
           if IsWon == True:
                print(rname+": WHAT? Unbeliebable!", end = "")
                input("")
-               print("I picked the wrong POKéMON!",end == "")
+               print("I picked the wrong POKéMON!",end = "")
                input("")
-               print(name,"got 175₽ for winning!", end == "")
+               print(name,"got 175₽ for winning!", end = "")
                input("")
-               print(rname+": Okay! I'll make my POKéMON fight to toughen it up!", end == "")
+               print(rname+": Okay! I'll make my POKéMON fight to toughen it up!", end = "")
                input("")
-               print(name+"! Gramps! Smell you later!", end == "")
+               print(name+"! Gramps! Smell you later!", end = "")
                mixer.music.load("SOUND/15 Rival Appears.mp3")
                mixer.music.play()
                input("")
-               print(rname,"marches out of the Lab, frustrated but determined.", end == "")
+               print(rname,"marches out of the Lab, frustrated but determined.", end = "")
           if IsWon == False:
-               print(rname+": Yeah! Am I great or what?", end == "")
+               print(rname+": Yeah! Am I great or what?", end = "")
                input("")
-               print(rname+": Okay! I'll make my POKéMON fight to toughen it up!", end == "")
+               print(rname+": Okay! I'll make my POKéMON fight to toughen it up!", end = "")
                input("")
-               print(name+"! Gramps! Smell you later!", end == "")
+               print(name+"! Gramps! Smell you later!", end = "")
                mixer.music.load("SOUND/15 Rival Appears.mp3")
                mixer.music.play()
                input("")
-               print(rname,"marches out of the Lab, cocky and fullfiled", end == "")
+               print(rname,"marches out of the Lab, cocky and fullfiled", end = "")
                input("")
           mixer.music.load("SOUND/31 Oak Research Lab.mp3")
           mixer.music.play()
           print("You walk over to Professor OAK after the fight")
           input("")
-          print("OAK:",name+", raise your young POKéMON by making it fight!", end == "")
+          print("OAK:",name+", raise your young POKéMON by making it fight!", end = "")
           input("")
           print("So, you walk out of the lab, and set out on your Pokémon journey")
           mixer.music.load("SOUND/04 Pallet Town's Theme.mp3")
