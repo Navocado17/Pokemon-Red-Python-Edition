@@ -44,7 +44,7 @@ print("                            ⠀⠀⢐⠀⠀⠁⡀⠀⠀⢀⠀⠀⠀⢨⠀
 print("                            ⠀⢀⣨⣤⠀⠀⠐⠃⠐⠚⠢⠀⠀⠈⠑⠊⠀⠀⠀")
 print("                            ⠀⠘⠓⠋⠉⠁⠀⠀⠀⠀⠀⠓⢶⡾⠗⠀⠀⠀⠀")
 
-input("\n                        (Press Any Key To Continue)")
+input("\n                        (Press Enter To Continue)")
 
 mixer.music.load("SOUND/02 Opening (part 2).mp3")
 mixer.music.play()
