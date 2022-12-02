@@ -19,8 +19,8 @@ class Pokemon:
 
 
     
-charmander = Pokemon("CHARMANDER", "Fire", "CHARMANDER", 5, movesDB.scratch, movesDB.growl, movesDB.ember, "Smokescreen", 19, 11, 10, 11, 12)
-squirtle = Pokemon("SQUIRTLE", "Water", "SQUIRTLE", 5, movesDB.tackle, movesDB.tail_whip, movesDB.water_gun, "bubble", 20, 10, 12, 11, 10)
+charmander = Pokemon("CHARMANDER", "Fire", "CHARMANDER", 5, movesDB.scratch, movesDB.growl, movesDB.ember, "", 19, 11, 10, 11, 12)
+squirtle = Pokemon("SQUIRTLE", "Water", "SQUIRTLE", 5, movesDB.tackle, movesDB.tail_whip, movesDB.water_gun, "", 20, 10, 12, 11, 10)
 bulbasaur = Pokemon("BULBASAUR", "Grass", "BULBASAUR", 5, movesDB.tackle, movesDB.growl, movesDB.leech_seed, movesDB.vine_whip, 20, 10, 10, 13, 10)
 rattata = Pokemon("RATTATA", "Normal", "RATTATA", 5, movesDB.tackle, movesDB.tail_whip, "Quick Attack", "bite", 0, 0, 0, 0, 0)
 pidgey = Pokemon("PIDGEY", "Normal", "PIDGEY", 5, "Gust", "Sand-Attack", "Quick Attack", "Agility", 0, 0, 0, 0, 0)
