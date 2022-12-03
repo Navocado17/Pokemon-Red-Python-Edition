@@ -56,6 +56,28 @@ def battle(playerPokemon, enemyPokemon):
                     mixer.music.load("SOUND/26 Victory (VS Trainer).mp3")
                     mixer.music.play()
                     input("")
+                    #exp calculations
+                    involvedPokemon = 1
+                    isNotWildMultiplier = 1.5
+                    originalTrainerMultipler = 1
+                    expGain = ((enemyPokemon.expYield * enemyPokemon.level)/7) * (1/involvedPokemon) * isNotWildMultiplier * originalTrainerMultipler
+                    playerPokemon.exp = playerPokemon.exp + expGain
+                    print(playerPokemon.name, "gained", str(round(expGain)), "EXP!")
+                    expLimit = ((6/5) * ((playerPokemon.level + 1) ** 3)) - (15 * ((playerPokemon.level + 1) ** 2)) + (100 * (playerPokemon.level + 1)) - 140
+                    if playerPokemon.exp > expLimit:
+                         playerPokemon.level = playerPokemon.level + 1
+                         print(playerPokemon.name, "grew to LVL", str(playerPokemon.level) + "!")
+                         playerPokemon.hp = round((((playerPokemon.baseHP + playerPokemon.IVconstant) * 2 + playerPokemon.EVconstant) * playerPokemon.level)/100 + playerPokemon.level + 10)
+                         playerPokemon.attack = round((((playerPokemon.baseATK + playerPokemon.IVconstant) * 2 + playerPokemon.EVconstant) * playerPokemon.level)/100 + 5)
+                         playerPokemon.defense = round((((playerPokemon.baseDEF + playerPokemon.IVconstant) * 2 + playerPokemon.EVconstant) * playerPokemon.level)/100 + 5)
+                         playerPokemon.special = round((((playerPokemon.baseSPC + playerPokemon.IVconstant) * 2 + playerPokemon.EVconstant) * playerPokemon.level)/100 + 5)
+                         playerPokemon.speed = round((((playerPokemon.baseSPD + playerPokemon.IVconstant) * 2 + playerPokemon.EVconstant) * playerPokemon.level)/100 + 5)
+                         print("HP ->", playerPokemon.hp)
+                         print("ATK ->", playerPokemon.attack)
+                         print("DEF ->", playerPokemon.defense)
+                         print("SPC ->", playerPokemon.special)
+                         print("SPD ->", playerPokemon.speed)
+                    input("")
                     return True 
 
                #Enemys Turn (No rng rn uses only second move)
@@ -168,6 +190,18 @@ def battle(playerPokemon, enemyPokemon):
                     print("You Won!")
                     mixer.music.load("SOUND/26 Victory (VS Trainer).mp3")
                     mixer.music.play()
+                    input("")
+                    #exp calculations
+                    involvedPokemon = 1
+                    isNotWildMultiplier = 1.5
+                    originalTrainerMultipler = 1
+                    expGain = ((enemyPokemon.expYield * enemyPokemon.level)/7) * (1/involvedPokemon) * isNotWildMultiplier * originalTrainerMultipler
+                    playerPokemon.exp = playerPokemon.exp + expGain
+                    print(playerPokemon.name, "gained", str(round(expGain)), "EXP!")
+                    expLimit = ((6/5) * ((playerPokemon.level + 1) ** 3)) - (15 * ((playerPokemon.level + 1) ** 2)) + (100 * (playerPokemon.level + 1)) - 140
+                    if playerPokemon.exp > expLimit:
+                         playerPokemon.level = playerPokemon.level + 1
+                         print(playerPokemon.name, "grew to LVL", str(playerPokemon.level) + "!")
                     input("")
                     return True 
 
