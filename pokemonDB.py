@@ -26,15 +26,33 @@ class Pokemon:
     self.expYield = expYield
     self.exp = ((6/5) * (level ** 3)) - (15 * (level ** 2)) + (100 * level) - 140
 
-
-    
-charmander = Pokemon("CHARMANDER", "Fire", "CHARMANDER", 5, movesDB.scratch, movesDB.growl, movesDB.ember, "", 39, 52, 43, 50, 65, 62)
-squirtle = Pokemon("SQUIRTLE", "Water", "SQUIRTLE", 5, movesDB.tackle, movesDB.tail_whip, movesDB.water_gun, "", 44, 48, 65, 50, 43, 63)
 bulbasaur = Pokemon("BULBASAUR", "Grass", "BULBASAUR", 5, movesDB.tackle, movesDB.growl, movesDB.leech_seed, "", 45, 49, 49, 65, 45, 64)
-rattata = Pokemon("RATTATA", "Normal", "RATTATA", 5, movesDB.tackle, movesDB.tail_whip, "Quick Attack", "bite", 0, 0, 0, 0, 0, 0)
-pidgey = Pokemon("PIDGEY", "Normal", "PIDGEY", 5, "Gust", "Sand-Attack", "Quick Attack", "Agility", 0, 0, 0, 0, 0, 0)
+ivysaur = None
+venusaur = None
+charmander = Pokemon("CHARMANDER", "Fire", "CHARMANDER", 5, movesDB.scratch, movesDB.growl, movesDB.ember, "", 39, 52, 43, 50, 65, 62)
+charmeleon = None
+charizard = None
+squirtle = Pokemon("SQUIRTLE", "Water", "SQUIRTLE", 5, movesDB.tackle, movesDB.tail_whip, movesDB.water_gun, "", 44, 48, 65, 50, 43, 63)
+wartortle = None
+blastoise = None
 caterpie = Pokemon("CATERPIE", "Bug", "CATERPIE", 5, movesDB.tackle, "String Shot", "", "", 0, 0, 0, 0, 0, 0)
+metapod = None
+butterfree = None
 weedle = Pokemon("WEEDLE", "Bug", "WEEDLE", 5, "Poison Sting", "String Shot", "", "", 0, 0, 0, 0, 0, 0)
+kakuna = None
+beedrill = None
+pidgey = Pokemon("PIDGEY", "Normal", "PIDGEY", 5, "Gust", "Sand-Attack", "Quick Attack", "Agility", 0, 0, 0, 0, 0, 0)
+pidgeotto = None
+pidgeot = None
+rattata = Pokemon("RATTATA", "Normal", "RATTATA", 5, movesDB.tackle, movesDB.tail_whip, "Quick Attack", "bite", 0, 0, 0, 0, 0, 0)
+raticate = None
+spearow = None
+fearow = None
+ekans = None
+arbok = None
 pikachu = Pokemon("PIKACHU", "Elecric", "PIKACHU", 5, "Thundershock", "growl", "", "", 0, 0, 0, 0, 0, 0)
-nidoranM = Pokemon("NIDORAN", "Poison", "NIDORAN", 5, "Leer", movesDB.tackle, "Horn Attack", "", 0, 0, 0, 0, 0, 0)
+raichu = None
+sandshrew = None
+sandslash = None
 nidoranF = Pokemon("NIDORAN", "Poison", "NIDORAN", 5, movesDB.growl, movesDB.tackle, movesDB.scratch, "", 0, 0, 0, 0, 0, 0)
+nidoranM = Pokemon("NIDORAN", "Poison", "NIDORAN", 5, "Leer", movesDB.tackle, "Horn Attack", "", 0, 0, 0, 0, 0, 0)
