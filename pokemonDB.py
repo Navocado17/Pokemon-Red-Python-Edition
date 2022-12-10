@@ -54,5 +54,5 @@ pikachu = Pokemon("PIKACHU", "Elecric", "PIKACHU", 5, "Thundershock", "growl", "
 raichu = None
 sandshrew = None
 sandslash = None
-nidoranF = Pokemon("NIDORAN", "Poison", "NIDORAN", 5, movesDB.growl, movesDB.tackle, movesDB.scratch, "", 0, 0, 0, 0, 0, 0)
-nidoranM = Pokemon("NIDORAN", "Poison", "NIDORAN", 5, "Leer", movesDB.tackle, "Horn Attack", "", 0, 0, 0, 0, 0, 0)
+nidoran_f = Pokemon("NIDORAN", "Poison", "NIDORAN", 5, movesDB.growl, movesDB.tackle, movesDB.scratch, "", 0, 0, 0, 0, 0, 0)
+nidoran_n = Pokemon("NIDORAN", "Poison", "NIDORAN", 5, "Leer", movesDB.tackle, "Horn Attack", "", 0, 0, 0, 0, 0, 0)
