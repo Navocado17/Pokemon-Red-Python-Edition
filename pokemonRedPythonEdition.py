@@ -1,6 +1,5 @@
 #IMPORTS
 from pygame import mixer
-import termcolor
 import os
 import pokemonDB
 import mechanics
@@ -98,16 +97,93 @@ def route1():
         print("Pallet Town")
         print("Viridian City")
         print("Tall Grass")
-        pt=input("Choose where you will go? ▼")
+        pt=input("Choose where you will go ▼")
         pt=pt.lower()
         if pt == "pallet town":
             palletTown()
         if pt == "viridian city":
-            print("Under Development!")
+            print("After walking a bit you step into 'The Eternally Green Paradise', Viridian city!")
+            viridianCity()
         if pt == "tall grass":
             isWon = mechanics.battle(party[0], pokemonDB.rattata, 3, 1)
 
+def viridianCity():
+    mixer.music.load("SOUND/07 Pewter City's Theme.mp3")
+    mixer.music.play()
+    print("\nNow in Viridian City!")
+    parcelQuest=True
+    print("Where will you go now? ▼")
+    print("POKéMON Center")
+    print("POKéMON Mart")
+    print("Route 2")
+    print("Route 22")
+    print("POKéMON Gym")
+    print("Route 1") 
+    vc=input("Choose where you will go ▼")
+    if vc.lower() == "pokemon center":
+        mixer.music.load("SOUND/05 Pokemon Center.mp3")
+        mixer.music.play()
+        print("You enter the POKéMON center")
+        input()
+        print("Heal pokemon")
+        print("Use PC")
+        pokecenter=input("What would you like to do in the POKéMON center?")
+        if pokecenter.lower()=="heal" or pokecenter.lower()=="heal pokemon":
+            print("You walk over and talk to nurse joy",end="")
+            input()
+            print("Joy: Welcome to our POKéMON CENTER! We heal your POKéMON back to perfect health!",end="")
+            input()
+            heal=input("Shall we heal your POKéMON? [Heal/cancel]")
+            if heal.lower()=="heal" or heal.lower()=="yes":
+                print("OK. We'll need your POKéMON.",end="")
+                input()
+                print("*pokemon heals* (under dev)",end="")
+                input()
+                print("Thank you! Your POKéMON are fighting fit! We hope to see you again!",end="")
+                input()
+                viridianCity()
+        if pokecenter.lower()=="pc" or pokecenter.lower()=="use pc":
+            print("You booted up the PC. It died. (under development",end="")
+            input()
+            print("You walk out of the POKéMON center",end="")
+            viridianCity()
+    if vc.lower()=="pokemon mart" or vc.lower=="mart":
+        mixer.music.load("SOUND/05 Pokemon Center.mp3")
+        mixer.music.play()
+        while parcelQuest==True:
+            print("As you step in the POKéMON mart, you grab the attention of the mart clerk",end="")
+            input()
+            print("Clerk: Hey! You came from PALLET TOWN?",end="")
+            input()
+            print("you walk over to the clerk",end="")
+            input()
+            print("You know PROF. OAK, right? His order came in. Will you take it to him?",end="")
+            input()
+            print(name,"got OAK's PARCEL!",end="")
+            input()
+            print("Clerk: Okay! Say hi to PROF. OAK for me!",end="")
+            input()
+            print("You step out of the POKéMON mart and make your way to deliver the parcel to professor oak",end="")
+            viridianCity()
 
+    if vc.lower()=="route 2":
+        while parcelQuest==True:
+            print("You try to make your way over to route 2, but it appears there is an old man lying on the road, blocking the path",end="")
+            input()
+            print("Old man: You can't go through here! This is private property!",end="")
+            input()
+            print("Grand Daughter: Oh Grandpa! Don't be so mean! He hasn't had his coffee yet.",end="")
+
+    if vc.lower()=="route 1":
+        print("You decide to head back to route 1")
+        route1()
+            
+            
+            
+    
+    
+    
+    
 
 
 # GAME START
@@ -153,7 +229,7 @@ while isDeciding == True:
  
      option=input("Enter your option ▼")
      option = option.lower()
-     if option=="new game" or option=="newgame" or option=="ng":
+     if option=="new game" or option=="newgame" or option=="ng" or option=="new" or option=="n":
           mixer.init()
           mixer.music.load("SOUND/03 To Bill's Origin ~ From Cerulean.mp3 ")
           mixer.music.play()
@@ -265,7 +341,7 @@ while isDeciding == True:
                starter=input("\nChoose your starter POKéMON ▼")
                if starter.lower()=="charmander":
                     confirm=input("So! You want the fire POKéMON, CHARMANDER? [>YES/>NO]")
-                    if confirm.lower()=="yes":
+                    if confirm.lower()=="yes" or confirm.lower()=="y":
                          player_pokedex.append(pokemonDB.charmander)
                          rival_pokedex.append(pokemonDB.squirtle)
                          isDeciding = False
@@ -273,7 +349,7 @@ while isDeciding == True:
                          continue
                if starter.lower()=="squirtle":
                     confirm=input("So! You want the water POKéMON, SQUIRTLE? [>YES/>NO]")
-                    if confirm.lower()=="yes":
+                    if confirm.lower()=="yes" or confirm.lower()=="y":
                          player_pokedex.append(pokemonDB.squirtle)
                          rival_pokedex.append(pokemonDB.bulbasaur)
                          isDeciding = False
@@ -281,7 +357,7 @@ while isDeciding == True:
                          continue
                if starter.lower()=="bulbasaur":
                     confirm=input("So! You want the plant POKéMON, BULBASAUR? [>YES/>NO]")
-                    if confirm.lower()=="yes":
+                    if confirm.lower()=="yes" or confirm.lower()=="y":
                          player_pokedex.append(pokemonDB.bulbasaur)
                          rival_pokedex.append(pokemonDB.charmander)
                          isDeciding = False
@@ -329,7 +405,7 @@ while isDeciding == True:
           print("Go!",player_pokedex[0].name+"!")
           IsWon=mechanics.battle(party[0], rival_pokedex[0], 5, 2)
           if IsWon == True:
-               print(rname+": WHAT? Unbeliebable!", end = "")
+               print(rname+": WHAT? Unbelievable!", end = "")
                input("")
                print("I picked the wrong POKéMON!",end = "")
                input("")
@@ -361,6 +437,7 @@ while isDeciding == True:
           input("")
           print("So, you walk out of the lab, and set out on your Pokémon journey")
           palletTown()
+          
           
 
 
