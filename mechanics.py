@@ -2,8 +2,13 @@ from pygame import mixer
 import random
 mixer.init()
 
-def battle(playerPokemon, enemyPokemon):
-     
+def battle(playerPokemon, enemyPokemon, enemyLevel, battletype):
+     if battletype == 1: mixer.music.load("SOUND/24 Battle (VS Wild Pokemon).mp3")
+     if battletype == 2: mixer.music.load("SOUND/23 Battle (VS Trainer).mp3")
+     if battletype == 3: mixer.music.load("SOUND/22 Battle (VS Gym Leader).mp3")
+     enemyPokemon.level = enemyLevel
+     enemyPokemon.hp = round((((enemyPokemon.baseHP + enemyPokemon.IVconstant) * 2 + enemyPokemon.EVconstant) * enemyPokemon.level)/100 + enemyPokemon.level + 10)
+     mixer.music.play()
      while playerPokemon.hp > 0 and enemyPokemon.hp > 0:
           print("\n"+playerPokemon.name + " - HP: " + str(playerPokemon.hp))
           print(enemyPokemon.name + " - HP: " + str(enemyPokemon.hp))
@@ -77,7 +82,9 @@ def battle(playerPokemon, enemyPokemon):
                     input("")
                     print(enemyPokemon.name, "has fainted!")
                     print("You Won!")
-                    mixer.music.load("SOUND/26 Victory (VS Trainer).mp3")
+                    if battletype == 1: mixer.music.load("SOUND/27 Victory (VS Wild Pokemon).mp3")
+                    if battletype == 2: mixer.music.load("SOUND/26 Victory (VS Trainer).mp3")
+                    if battletype == 3: mixer.music.load("SOUND/28 Victory (VS Gym Leader).mp3")
                     mixer.music.play()
                     input("")
                     
@@ -213,7 +220,9 @@ def battle(playerPokemon, enemyPokemon):
                     input("")
                     print(enemyPokemon.name, "has fainted!")
                     print("You Won!")
-                    mixer.music.load("SOUND/26 Victory (VS Trainer).mp3")
+                    if battletype == 1: mixer.music.load("SOUND/27 Victory (VS Wild Pokemon).mp3")
+                    if battletype == 2: mixer.music.load("SOUND/26 Victory (VS Trainer).mp3")
+                    if battletype == 3: mixer.music.load("SOUND/28 Victory (VS Gym Leader).mp3")
                     mixer.music.play()
                     input("")
                     
