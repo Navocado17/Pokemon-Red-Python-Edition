@@ -13,8 +13,7 @@ party=[]
 player_pokedex = []
 rival_pokedex = []
 
-
-# LEVEL STRUCTURES
+#LEVEL STRUCTURES
 def tutorialStagePalletTown():
     isDeciding = True
     while isDeciding == True:
@@ -32,7 +31,7 @@ def tutorialStagePalletTown():
                     print("You decide to go back out", end = "")
                     input("")
                     continue
-               if pt=="oak pokémon research lab" or pt=="oak pokemon research lab":
+               if pt in "oak pokémon's house" or "oak pokemon's house":
                     print("You decide to head straight over to PROF.OAK's lab, just like your mother insisted. As you enter, you see a lot of scientists", end = "")
                     input("")
                     print("You then walk deeper into the room, just to see",rname, end = "")
@@ -71,7 +70,7 @@ def palletTown():
                          print("You decide to go back out", end = "")
                          input("")
                          continue
-                    if pt=="oak pokémon research lab" or pt=="oak pokemon research lab":
+                    if pt in "oak pokémon's house" or "oak pokemon's house":
                          print("You decide to head straight over to PROF.OAK's lab, just like your mother insisted. As you enter, you see a lot of scientists", end = "")
                          input("")
                          print("You then walk deeper into the room, just to see",rname, end = "")
@@ -85,9 +84,7 @@ def palletTown():
                          isDeciding = False
                          route1()
                          
-
 def route1():
-    
     isDeciding = True
     print("\nNow in ROUTE 1!")
     while isDeciding == True:
@@ -183,10 +180,7 @@ def viridianCity():
     
     
     
-    
-
-
-# GAME START
+#GAME START
 mixer.init()
 mixer.music.load("SOUND/01 Opening (part 1).mp3")
 mixer.music.play()
