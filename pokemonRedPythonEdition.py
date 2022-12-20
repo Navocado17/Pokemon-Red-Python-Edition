@@ -31,7 +31,7 @@ def tutorialStagePalletTown():
                     print("You decide to go back out", end = "")
                     input("")
                     continue
-               if pt in "oak pokémon's house" or "oak pokemon's house":
+               if pt=="oak pokémon research lab" or pt=="oak pokemon research lab" or pt=="research lab" or pt=="lab":
                     print("You decide to head straight over to PROF.OAK's lab, just like your mother insisted. As you enter, you see a lot of scientists", end = "")
                     input("")
                     print("You then walk deeper into the room, just to see",rname, end = "")
@@ -70,7 +70,7 @@ def palletTown():
                          print("You decide to go back out", end = "")
                          input("")
                          continue
-                    if pt in "oak pokémon's house" or "oak pokemon's house":
+                    if pt=="oak pokémon research lab" or pt=="oak pokemon research lab" or pt=="research lab" or pt=="lab":
                          print("You decide to head straight over to PROF.OAK's lab, just like your mother insisted. As you enter, you see a lot of scientists", end = "")
                          input("")
                          print("You then walk deeper into the room, just to see",rname, end = "")
